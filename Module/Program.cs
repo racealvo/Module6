@@ -47,6 +47,15 @@ namespace Module
                 Console.WriteLine("\n\nThis is a little extra clarification.");
                 // This shows the number of students enrolled in the school
                 Console.WriteLine("The school has {0} students enrolled.", Student.EnrolledStudents);
+
+                // Extra
+                Person person = new Person("PersonFirst", "PersonLast", new DateTime(2000, 1, 1));
+                student = new Student("StudentFirst", "StudentLast", new DateTime(1900, 12, 31));
+                person = student;
+
+                Console.WriteLine("{0} {1} born on {2}", person.FirstName, person.LastName, person.BirthDate.ToString());
+
+                person.PrintBio();
             }
             catch (NotImplementedException e)
             {

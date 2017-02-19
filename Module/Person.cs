@@ -12,7 +12,7 @@ namespace Module
         public string LastName { get; }
         public DateTime BirthDate { get; }
 
-        protected Person(string first, string last, DateTime date)
+        public Person(string first, string last, DateTime date)
         {
             this.FirstName = first;
             this.LastName = last;
