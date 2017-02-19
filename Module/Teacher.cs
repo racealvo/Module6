@@ -10,5 +10,28 @@ namespace Module
     {
         public Teacher(string first, string last, DateTime date) : base(first, last, date)
         { }
+
+        public override void PrepareForClass()
+        {
+            Console.WriteLine("Write up lecture, slides and practice.");
+        }
+
+        public void GradeTest()
+        {
+            Console.WriteLine("Grade test (boring).");
+        }
+
+        public void AttendFacultyMeeting()
+        {
+            Console.WriteLine("Attend faculty meeting.");
+        }
+
+        public override void GoAboutMyDay()
+        {
+            PrintBio();
+            PrepareForClass();
+            GradeTest();
+            AttendFacultyMeeting();
+        }
     }
 }

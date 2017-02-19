@@ -19,9 +19,19 @@ namespace Module
             this.BirthDate = date;
         }
 
-        protected void PrintBio()
+        public void PrintBio()
         {
             Console.WriteLine("{0} {1} born on {2}", FirstName, LastName, BirthDate.ToString());
+        }
+
+        public virtual void PrepareForClass()
+        {
+            Console.WriteLine("Prepare for class.");
+        }
+
+        public virtual void GoAboutMyDay()
+        {
+            PrepareForClass();
         }
     }
 }
